@@ -13,13 +13,13 @@ public class Items {
 	public static Item CowSword;
 	
 	public static void load() {
-		PigSword = new ItemPigSword().setUnlocalizedName("PigSword").setTextureName(MobSwords.modid + ":" + "PigSword");
+		PigSword = new ItemPigSword();
         GameRegistry.registerItem(PigSword, "Oink");
 		
-        SheepSword = new ItemSheepSword().setUnlocalizedName("SheepSword").setTextureName(MobSwords.modid + ":" + "SheepSword");
+        SheepSword = new ItemSheepSword();
         GameRegistry.registerItem(SheepSword, "Baa");
         
-		CowSword = new ItemCowSword().setUnlocalizedName("CowSword").setTextureName(MobSwords.modid + ":" + "CowSword");
+		CowSword = new ItemCowSword();
         GameRegistry.registerItem(CowSword, "Moo");
 	}
 }
