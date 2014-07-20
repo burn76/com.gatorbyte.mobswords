@@ -1,5 +1,6 @@
 package com.vedel.MobSwords;
 
+import net.minecraft.entity.passive.EntityChicken;
 import net.minecraft.entity.passive.EntityCow;
 import net.minecraft.entity.passive.EntityPig;
 import net.minecraft.entity.passive.EntitySheep;
@@ -45,6 +46,12 @@ public class EventHook
 			EntitySheep sheep = new EntitySheep(world);
 			sheep.setLocationAndAngles(event.entity.posX, event.entity.posY + 1, event.entity.posZ, MathHelper.wrapAngleTo180_float(world.rand.nextFloat() * 360.0F), 0.0F);
 			world.spawnEntityInWorld(sheep);
+		}
+		if(item != null && item == Items.ChickenSword)
+		{
+			EntityChicken chicken = new EntityChicken(world);
+			chicken.setLocationAndAngles(event.entity.posX, event.entity.posY + 1, event.entity.posZ, MathHelper.wrapAngleTo180_float(world.rand.nextFloat() * 360.0F), 0.0F);
+			world.spawnEntityInWorld(chicken);
 		}
 	}
 }

@@ -14,12 +14,18 @@ public class Recipes {
 		GameRegistry.addShapedRecipe(new ItemStack(Items.spawn_egg, 1, 91), new Object[] {"WGW", "GEG", "WGW", 'W', Blocks.wool, 'G', Items.gold_ingot, 'E', Items.emerald});
 		//Cow Spawn Egg Recipe
 		GameRegistry.addShapedRecipe(new ItemStack(Items.spawn_egg, 1, 92), new Object[] {"BGB", "GEG", "BGB", 'B', Items.beef, 'G', Items.gold_ingot, 'E', Items.emerald});
-		
+		//Chicken Spawn Egg Recipe
+		GameRegistry.addShapedRecipe(new ItemStack(Items.spawn_egg, 1, 93), new Object[] {"FGF", "GEG", "FGF", 'F', Items.feather, 'G', Items.gold_ingot, 'E', Items.emerald});
+				
 		//Pig Sword Recipe
 		GameRegistry.addRecipe(new ItemStack(com.vedel.MobSwords.Items.PigSword), new Object[] {" E ", " E ", " S ", 'E', new ItemStack(Items.spawn_egg, 1, 90), 'S', Items.stick});
 		//Sheep Sword Recipe
 		GameRegistry.addRecipe(new ItemStack(com.vedel.MobSwords.Items.SheepSword), new Object[] {"E", "E", "S", 'E', new ItemStack(Items.spawn_egg, 1, 91), 'S', Items.stick});
 		//Cow Sword Recipe
 		GameRegistry.addRecipe(new ItemStack(com.vedel.MobSwords.Items.CowSword), new Object[] {"E", "E", "S", 'E', new ItemStack(Items.spawn_egg, 1, 92), 'S', Items.stick});
+		//Chicken Sword Recipe
+		GameRegistry.addRecipe(new ItemStack(com.vedel.MobSwords.Items.ChickenSword), new Object[] {"E", "E", "S", 'E', new ItemStack(Items.spawn_egg, 1, 93), 'S', Items.stick});
+
+	
 	}
 }
