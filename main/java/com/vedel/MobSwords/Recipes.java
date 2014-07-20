@@ -6,8 +6,17 @@ import cpw.mods.fml.common.registry.GameRegistry;
 
 public class Recipes {
 	public static void load() {
-		GameRegistry.addShapedRecipe(new ItemStack(com.vedel.MobSwords.Items.CowSword), new Object[] {"MIM", "MIM", "MSM", 'M', Items.cooked_beef, 'I', Items.iron_ingot, 'S', Items.stick});
+
+		//Cow Spawn Egg Recipe
+		GameRegistry.addShapedRecipe(new ItemStack(Items.spawn_egg, 1, 92), new Object[] {"BGB", "GEG", "BGB", 'B', Items.beef, 'G', Items.gold_ingot, 'E', Items.emerald});
+
+		//Cow Sword Recipe
+		GameRegistry.addRecipe(new ItemStack(com.vedel.MobSwords.Items.CowSword), new Object[] {"E", "E", "S", 'E', new ItemStack(Items.spawn_egg, 1, 92), 'S', Items.stick});
 		
-		GameRegistry.addShapedRecipe(new ItemStack(com.vedel.MobSwords.Items.PigSword), new Object[] {"PIP", "PIP", "PSP", 'P', Items.cooked_porkchop, 'I', Items.iron_ingot, 'S', Items.stick});
+		//Pig Spawn Egg Recipe
+		GameRegistry.addShapedRecipe(new ItemStack(Items.spawn_egg, 1, 90), new Object[] {"PGP", "GEG", "PGP", 'P', Items.porkchop, 'G', Items.gold_ingot, 'E', Items.emerald});
+		
+		//Pig Sword Recipe
+		GameRegistry.addShapedRecipe(new ItemStack(com.vedel.MobSwords.Items.PigSword), new Object[] {" E ", " E ", " S ", 'E', new ItemStack(Items.spawn_egg, 1, 90), 'S', Items.stick});
 	}
 }
