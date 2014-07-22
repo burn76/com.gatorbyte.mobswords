@@ -12,12 +12,14 @@ public class Recipes {
 	private static Object[][] recipeItems = new Object[][]  {{Items.porkchop, 
 															  Blocks.wool, 
 															  Items.beef, 
-															  Items.feather}, 
+															  Items.feather,
+															  new ItemStack(Items.dye, 1, 0)}, 
 															 {com.vedel.MobSwords.Items.PigSword, 
 															  com.vedel.MobSwords.Items.SheepSword, 
 															  com.vedel.MobSwords.Items.CowSword, 
-															  com.vedel.MobSwords.Items.ChickenSword}};
-	private static int[] spawnEggTypes = new int[] {90, 91, 92, 93};
+															  com.vedel.MobSwords.Items.ChickenSword,
+															  com.vedel.MobSwords.Items.SquidSword}};
+	private static int[] spawnEggTypes = new int[] {90, 91, 92, 93, 94};
 	
 	public static void load() {
 		for (int j = 0; j < recipeItems[0].length; j++) {

@@ -1,9 +1,6 @@
 package com.vedel.MobSwords;
 
-import net.minecraft.entity.passive.EntityChicken;
-import net.minecraft.entity.passive.EntityCow;
-import net.minecraft.entity.passive.EntityPig;
-import net.minecraft.entity.passive.EntitySheep;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -17,41 +14,30 @@ public class EventHook
 
 	@SubscribeEvent
 	public void entityAttacked(AttackEntityEvent event)
-	{
-		
+	{	
 		EntityPlayer player = event.entityPlayer;
 		World world = player.worldObj;
-		if(world.isRemote)
-		{
-			return;
-		}
 		ItemStack itemStack = player.getCurrentEquippedItem();
 		Item item = itemStack.getItem();
-		if(item != null && item == Items.CowSword)
+		Entity entity = EntityFactory.getEntity(item, world); 
+		if(entity != null)
 		{
-			EntityCow cow = new EntityCow(world);
-			cow.setLocationAndAngles(event.entity.posX, event.entity.posY + 1, event.entity.posZ, MathHelper.wrapAngleTo180_float(world.rand.nextFloat() * 360.0F), 0.0F);
-			world.spawnEntityInWorld(cow);
-		}
-				
-		if(item != null && item == Items.PigSword)
-		{
-			EntityPig pig = new EntityPig(world);
-			pig.setLocationAndAngles(event.entity.posX, event.entity.posY + 1, event.entity.posZ, MathHelper.wrapAngleTo180_float(world.rand.nextFloat() * 360.0F), 0.0F);
-			world.spawnEntityInWorld(pig);
+			if(!world.isRemote)
+			{
+				entity.setLocationAndAngles(event.entity.posX, event.entity.posY + 1, event.entity.posZ, MathHelper.wrapAngleTo180_float(world.rand.nextFloat() * 360.0F), 0.0F);
+				world.spawnEntityInWorld(entity);
+			}
+//			else
+//			{
+//				//particle can only be spawned on the client
+//				Random rand = new Random();
+//				for(int i = 0; i <= 20; ++i)
+//				{
+//					world.spawnParticle("reddust", event.entity.posX + (rand.nextDouble() - 0.5D) * (double)event.entity.width, event.entity.posY + rand.nextDouble() * (double)event.entity.height - (double)event.entity.yOffset, event.entity.posZ + (rand.nextDouble() - 0.5D) * (double)event.entity.width, 0.0D, 0.0D, 0.0D);
+//				}	
+//			}
 		}
 		
-		if(item != null && item == Items.SheepSword)
-		{
-			EntitySheep sheep = new EntitySheep(world);
-			sheep.setLocationAndAngles(event.entity.posX, event.entity.posY + 1, event.entity.posZ, MathHelper.wrapAngleTo180_float(world.rand.nextFloat() * 360.0F), 0.0F);
-			world.spawnEntityInWorld(sheep);
-		}
-		if(item != null && item == Items.ChickenSword)
-		{
-			EntityChicken chicken = new EntityChicken(world);
-			chicken.setLocationAndAngles(event.entity.posX, event.entity.posY + 1, event.entity.posZ, MathHelper.wrapAngleTo180_float(world.rand.nextFloat() * 360.0F), 0.0F);
-			world.spawnEntityInWorld(chicken);
-		}
+
 	}
 }
