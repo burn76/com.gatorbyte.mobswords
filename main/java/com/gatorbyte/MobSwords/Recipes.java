@@ -1,4 +1,4 @@
-package com.vedel.MobSwords;
+package com.gatorbyte.MobSwords;
 
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
@@ -14,11 +14,11 @@ public class Recipes {
 															  Items.beef, 
 															  Items.feather,
 															  new ItemStack(Items.dye, 1, 0)}, 
-															 {com.vedel.MobSwords.Items.PigSword, 
-															  com.vedel.MobSwords.Items.SheepSword, 
-															  com.vedel.MobSwords.Items.CowSword, 
-															  com.vedel.MobSwords.Items.ChickenSword,
-															  com.vedel.MobSwords.Items.SquidSword}};
+															 {com.gatorbyte.MobSwords.Items.PigSword, 
+															  com.gatorbyte.MobSwords.Items.SheepSword, 
+															  com.gatorbyte.MobSwords.Items.CowSword, 
+															  com.gatorbyte.MobSwords.Items.ChickenSword,
+															  com.gatorbyte.MobSwords.Items.SquidSword}};
 	private static int[] spawnEggTypes = new int[] {90, 91, 92, 93, 94};
 	
 	public static void load() {

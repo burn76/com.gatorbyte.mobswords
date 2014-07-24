@@ -1,9 +1,9 @@
-package com.vedel.MobSwords.Item;
+package com.gatorbyte.MobSwords.Item;
 
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemSword;
 
-import com.vedel.MobSwords.MobSwords;
+import com.gatorbyte.MobSwords.MobSwords;
 
 public class ItemSquidSword extends ItemSword {
 

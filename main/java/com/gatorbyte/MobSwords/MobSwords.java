@@ -1,4 +1,4 @@
-package com.vedel.MobSwords;
+package com.gatorbyte.MobSwords;
 
 
 import java.util.ArrayList;

@@ -1,6 +1,6 @@
-package com.vedel.MobSwords.Item;
+package com.gatorbyte.MobSwords.Item;
 
-import com.vedel.MobSwords.MobSwords;
+import com.gatorbyte.MobSwords.MobSwords;
 
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemSword;

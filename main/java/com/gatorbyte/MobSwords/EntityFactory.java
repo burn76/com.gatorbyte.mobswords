@@ -1,4 +1,4 @@
-package com.vedel.MobSwords;
+package com.gatorbyte.MobSwords;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.passive.EntityChicken;

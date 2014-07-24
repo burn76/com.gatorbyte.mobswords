@@ -1,10 +1,10 @@
-package com.vedel.MobSwords;
+package com.gatorbyte.MobSwords;
 
-import com.vedel.MobSwords.Item.ItemChickenSword;
-import com.vedel.MobSwords.Item.ItemCowSword;
-import com.vedel.MobSwords.Item.ItemPigSword;
-import com.vedel.MobSwords.Item.ItemSheepSword;
-import com.vedel.MobSwords.Item.ItemSquidSword;
+import com.gatorbyte.MobSwords.Item.ItemChickenSword;
+import com.gatorbyte.MobSwords.Item.ItemCowSword;
+import com.gatorbyte.MobSwords.Item.ItemPigSword;
+import com.gatorbyte.MobSwords.Item.ItemSheepSword;
+import com.gatorbyte.MobSwords.Item.ItemSquidSword;
 
 import net.minecraft.item.Item;
 import cpw.mods.fml.common.registry.GameRegistry;
