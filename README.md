@@ -1,4 +1,4 @@
-com.vedel.mobswords
+com.gatorbyte.mobswords
 ===================
 
 Minecraft MobSwords Mod
