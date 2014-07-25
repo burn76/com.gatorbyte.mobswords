@@ -1,4 +1,4 @@
-package com.gatorbyte.MobSwords;
+package com.gatorbyte.mobswords.handler;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
@@ -9,11 +9,9 @@ import net.minecraft.world.World;
 import net.minecraftforge.event.entity.player.AttackEntityEvent;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 
-public class EventHook
-{
-
+public class AttackEntityEventHandler {
 	@SubscribeEvent
-	public void entityAttacked(AttackEntityEvent event)
+	public void onEntityAttacked(AttackEntityEvent event)
 	{	
 		EntityPlayer player = event.entityPlayer;
 		World world = player.worldObj;

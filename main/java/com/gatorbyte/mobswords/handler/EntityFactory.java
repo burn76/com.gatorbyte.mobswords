@@ -1,4 +1,6 @@
-package com.gatorbyte.MobSwords;
+package com.gatorbyte.mobswords.handler;
+
+import com.gatorbyte.mobswords.Items;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.passive.EntityChicken;
